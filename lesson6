@@ -1,1 +1,210 @@
 //1.
+public void f1()
+{
+    Scanner scan = new Scanner(System.in);
+	double avg=0;
+	for(int i=0 ; i<5 ; i++)
+	{
+		System.out.println("please enter your grade :");
+	    double num = scan.nextDouble();
+	    avg += num;
+	}
+	System.out.println("the average :"+avg/5);
+}
+
+//2.
+	public void f2()
+	{
+	    Scanner scan = new Scanner(System.in);
+	    int sum=1;
+	    System.out.println("please enter a word :");
+		String word = scan.next();
+		while(!word.equals("enter"))
+		{
+		    System.out.println("please enter another word :");
+		    word = scan.next();
+		    sum += 1;
+		}
+		System.out.println("the number of words including the word 'enter' :"+sum);
+	}
+
+//3.
+public void f3(int code) 
+    {
+        Scanner scan = new Scanner(System.in);
+        int num = 0;
+
+        do
+        {
+            System.out.println("Please enter the code:");
+            int inputCode = scan.nextInt();
+
+            if (code == inputCode) 
+            {
+                System.out.println("How much money");
+                break;
+            } 
+            else 
+            {
+                System.out.println("Error");
+                num += 1;
+            }
+        } while (num < 3);
+
+        if (num == 3) 
+        {
+            System.out.println("Maximum attempts reached. Access denied.");
+        }
+    }
+
+
+//4.
+public void f4(String word) 
+    {
+        boolean flag= false;
+        int len = word.length();
+        for(int i = 0 ; i < len/2 ; i++)
+        {
+            if( (word.charAt(i)) == (word.charAt(len-1)) )
+            {
+                flag=true;
+                len -= 1 ;
+            }
+            else
+            {
+                flag=false;
+                break;
+            }
+        }
+        if(flag==true)
+        {
+            System.out.println("Palindrome");
+        }
+        else
+        {
+            System.out.println("Not palindrome");    
+        }
+    }
+
+
+//5.
+ public void f5(int num)
+    {
+        for (int i = 1; i <= num; i++)
+        {
+            if (num % i == 0)
+            {
+                System.out.print(i);
+                if (i != num) 
+                {
+                    System.out.print(",");
+                }
+            }
+        }
+    }
+
+
+//6.
+public void f6()
+    {
+        for (int i = 1; i <= 10; i++)
+        {
+            for(int j = 1 ; j <= 10 ; j++)
+            {
+                System.out.print(i*j+" ");
+            }
+            System.out.println("");
+        }
+    }
+
+//7.
+public void f7()
+    {
+        Scanner scan = new Scanner(System.in);
+        int min = 100 ; 
+        int max = 0 ;
+        for (int i = 0; i <= 7; i++)
+        {
+            System.out.println("please enter a grade :");
+            int grade = scan.nextInt();
+            if (grade>max)
+            {
+                max = grade ; 
+            }
+            if(grade<min)
+            {
+                min = grade ; 
+            }
+            
+        }
+        System.out.println("the minimum number :"+min);
+        System.out.println("the maximum number :"+max);
+    }
+
+
+//8.
+ public boolean f8(int num)
+    {
+        
+        int a = 0 ; 
+        int b = 1 ; 
+        while (b < num)
+        {
+            int temp = a + b;
+            a = b;
+            b = temp;
+        }
+        return b == num;
+
+        
+    }
+
+//9.
+public void f9(int num1 , int num2)
+    {
+        int mul=0;
+        for(int i=0 ; i<num1 ; i++)
+        {
+            mul += num2;
+        }
+        System.out.println(mul);
+        
+    }
+
+
+//10.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
